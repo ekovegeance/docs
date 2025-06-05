@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/docs/meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/docs/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/docs/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.config.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/docs/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/index.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/docs/test.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/contributing.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/source.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/source.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(home)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/home/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(home)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/home/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/docs/[[...slug]]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(docs)/[[...slug]]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/docs/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(docs)/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +19,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ekovegeance"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ekovegeance/docs.git",
+    "accountId": "7ad12c16-313b-43c0-869a-fa8d454916a4"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 6
@@ -81,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749114632781</updated>
-      <workItem from="1749114635424" duration="2526000" />
+      <workItem from="1749114635424" duration="3402000" />
     </task>
     <servers />
   </component>
