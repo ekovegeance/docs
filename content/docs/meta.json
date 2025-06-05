@@ -1,0 +1,10 @@
+{
+  "title": "Documentation",
+  "description": "Documentation for the project, including guides, API references, and tutorials.",
+  "Icon": "Album",
+  "pages": [
+    "---Introduction---",
+    "index",
+    "contributing"
+  ]
+}
