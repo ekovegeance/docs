@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <html lang="en" className={plusJakartaSans.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
         <RootProvider>
-            <Banner id="developed" variant="rainbow">This documentation is still being developed and may change at any time.</Banner>
+            <Banner id="developed" variant="rainbow">Work in Progress</Banner>
             {children}
         </RootProvider>
       </body>
