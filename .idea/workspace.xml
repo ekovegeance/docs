@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="refactor: rename layout and page files for improved structure">
-      <change afterPath="$PROJECT_DIR$/app/(docs)/mdx-components.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/docs/styleguide/coding-standards/index.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/docs/styleguide/coding-standards/laravel.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/docs/styleguide/coding-standards/nextjs.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/docs/styleguide/index.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="feat: add style guides for Laravel and Next.js, and update documentation structure">
+      <change afterPath="$PROJECT_DIR$/content/docs/styleguide/design-guidelines/accessibility.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/styleguide/design-guidelines/atomic.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/styleguide/design-guidelines/index.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/styleguide/documentation-rules/commit.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/styleguide/documentation-rules/commnets.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/styleguide/documentation-rules/index.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/styleguide/documentation-rules/markdown.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/styleguide/documentation-rules/versioning.mdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/docs/meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/source.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/source.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mdx-components.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mdx-components.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/styleguide/index.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749114632781</updated>
-      <workItem from="1749114635424" duration="12721000" />
+      <workItem from="1749114635424" duration="15201000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: rename layout and page files for improved structure">
       <option name="closed" value="true" />
@@ -112,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749119056427</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: add style guides for Laravel and Next.js, and update documentation structure">
+      <option name="closed" value="true" />
+      <created>1749143706586</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749143706586</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor: rename layout and page files for improved structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: rename layout and page files for improved structure" />
+    <MESSAGE value="feat: add style guides for Laravel and Next.js, and update documentation structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add style guides for Laravel and Next.js, and update documentation structure" />
   </component>
 </project>
