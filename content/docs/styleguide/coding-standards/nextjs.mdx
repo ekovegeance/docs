@@ -31,9 +31,16 @@ config/     # Configuration files
         <File name="global.css" />
     </Folder>
     <Folder name="components">
-        <File name="button.tsx" />
-        <File name="tabs.tsx" />
-        <File name="dialog.tsx" />
+        <Folder name="ui">
+            <File name="button.tsx" />
+            <File name="tabs.tsx" />
+            <File name="dialog.tsx" />
+        </Folder>
+        <Folder name="post">
+            <File name="post-card.tsx" />
+            <File name="post-list.tsx" />
+        </Folder>
+        <Folder name="etc"/>
     </Folder>
     <Folder name="hooks">
         <File name="use-fetch.ts" />
@@ -59,7 +66,7 @@ config/     # Configuration files
         <File name="auth-context.tsx" />
         <File name="theme-context.tsx" />
     </Folder>
-    <File name="middleware.ts"/>
+    <File name="middleware.ts / proxy.ts"/>
     <File name="config.ts" />
     <File name="package.json" />
 </Files>
@@ -266,4 +273,8 @@ export default eslintConfig;
   "printWidth": 80
 }
 ```
+
+## Recommend Tools & Configuration
+- [Awesomecode](https://marketplace.visualstudio.com/items?itemName=ekovegeance.awesomecode) theme and code editor setup for VS Code
+- [Next.js MCP Server](https://nextjs.org/docs/app/guides/mcp) for coding agents
 
