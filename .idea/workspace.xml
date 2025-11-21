@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: update Laravel documentation with folder structure and recommended tools">
+    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: add extensions for Conventional Commits and GitHub Copilot to documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/documentation-rules/commit.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/styleguide/documentation-rules/commit.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "io.github.pandier.intellijdiscordrp.settings.DiscordSettingsConfigurable",
     "ts.external.directory.path": "/Users/me/git/docs/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -97,6 +96,7 @@
       <workItem from="1749810340335" duration="368000" />
       <workItem from="1749963570791" duration="577000" />
       <workItem from="1750810274784" duration="863000" />
+      <workItem from="1750811410099" duration="460000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: rename layout and page files for improved structure">
       <option name="closed" value="true" />
@@ -138,11 +138,22 @@
       <option name="project" value="LOCAL" />
       <updated>1749967127237</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="docs: add extensions for Conventional Commits and GitHub Copilot to documentation">
+      <option name="closed" value="true" />
+      <created>1750811483321</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750811483321</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.mdx" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor: rename layout and page files for improved structure" />
@@ -150,6 +161,7 @@
     <MESSAGE value="feat: add accessibility and atomic design guidelines, and establish documentation rules" />
     <MESSAGE value="docs: update README with installation and development instructions" />
     <MESSAGE value="docs: update Laravel documentation with folder structure and recommended tools" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: update Laravel documentation with folder structure and recommended tools" />
+    <MESSAGE value="docs: add extensions for Conventional Commits and GitHub Copilot to documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: add extensions for Conventional Commits and GitHub Copilot to documentation" />
   </component>
 </project>
