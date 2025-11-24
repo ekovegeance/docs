@@ -12,18 +12,6 @@ description: Next.js App Router (TypeScript) Style Guide
 ## Folder and File Structure
 - Follow [Next JS Project Structure](https://nextjs.org/docs/app/getting-started/project-structure)
 
-```
-app/        # App Router pages
-components/ # Reusable components
-hooks/      # Custom hooks
-lib/        # Utilities and helpers
-services/   # API calls or external integrations
-styles/     # Global and modular styles
-types/      # TypeScript types and interfaces
-context/    # Context API setup
-middleware/ # Middleware (if needed)
-config/     # Configuration files
-```
 <Files>
     <Folder name="app" defaultOpen>
         <File name="layout.tsx" />
@@ -73,9 +61,14 @@ config/     # Configuration files
 
 ---
 
-## File Naming
+## Naming Conventions
 
 - Use **kebab-case** for React component files, utility, hooks, or helper files.
+
+What | How | Good | Bad
+------------ | ------------- | ------------- | -------------
+React component file | kebab-case | login-form.tsx | ~~Login-Form.tsx~~
+Custom Hooks | kebab-case, use first | use-config.ts | ~~use-Config.tsx~~
 
 Examples:
 ```
