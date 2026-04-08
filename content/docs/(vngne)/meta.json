@@ -1,0 +1,13 @@
+{
+  "title": "Documentation",
+  "description": "Documentation for the project, including guides, API references, and tutorials.",
+  "icon": "Book",
+  "root": true,
+  "pages": [
+    "---Introduction---",
+    "index",
+    "contributing",
+    "---Source---",
+    "styleguide"
+  ]
+}

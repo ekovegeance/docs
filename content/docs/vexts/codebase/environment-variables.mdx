@@ -1,0 +1,78 @@
+---
+title: Environment Variables
+description: Learn how to manage environment variables in our project for secure and efficient configuration.
+---
+
+The starter kit uses [@t3-oss/env-nextjs](https://env.t3.gg/) to manage environment variables with type safety and validation. All environment variables are defined in ```lib/env.ts``` with Zod schemas.
+
+## Environment Variable Files
+---
+Create a .env file in the root directory (you can copy from .env.example):
+```bash title="Terminal"
+cp .env.example .env
+```
+
+## Required Environment Variables
+---
+The following environment variables are required for the application to run:
+### Database
+```text title=".env" icon="FileText"
+DATABASE_URL=postgresql://user:password@localhost:5432/dbname
+```
+### Authentication
+```text title=".env" icon="FileText"
+BETTER_AUTH_SECRET= # You can generate a random string using `openssl rand -base64 32`
+BETTER_AUTH_REQUIRE_EMAIL_VERIFICATION=false  # Set to true if you want to require email verification for new users
+```
+
+## Optional Environment Variables
+---
+### OAuth (Google)
+```text title=".env" icon="FileText"
+# Better Auth Social Provider  https://better-server.com/docs/authentication/google
+GOOGLE_CLIENT_ID= # You can get this from the Google Cloud Console
+GOOGLE_CLIENT_SECRET= # You can get this from the Google Cloud Console
+```
+
+### Email Service (Resend)
+```text title=".env" icon="FileText"
+RESEND_API_KEY= # You can get this from your Resend account dashboard
+RESEND_FROM_EMAIL= # The email address that will be used as the "from" address when sending emails through Resend. It should be in the format "
+```
+
+## Adding New Variables
+---
+To add new environment variables, follow these steps:
+1. Define the new variable in the .env file.
+2. Add a corresponding entry in ```lib/env.ts``` with appropriate validation using Zod.
+
+### Example: Adding a Server Variable
+```typescript title="lib/env.ts"
+server: {
+  // ... existing variables
+  MY_NEW_VAR: z.string().min(1),
+},
+```
+```typescript title="lib/env.ts"
+server: {
+  runtimeEnv: {
+    // ... existing variables
+    MY_NEW_VAR: process.env.MY_NEW_VAR,
+  },
+},
+```
+
+### Example: Adding a Client Variable
+Client variables must be prefixed with ```NEXT_PUBLIC_```:
+```typescript title="lib/env.ts"
+client: {
+  // ... existing variables
+  NEXT_PUBLIC_MY_NEW_VAR: z.string().min(1),
+},
+```
+```typescript title="lib/env.ts"
+runtimeEnv: {
+  // ... existing variables
+  NEXT_PUBLIC_MY_VAR: process.env.NEXT_PUBLIC_MY_VAR,
+},
+```

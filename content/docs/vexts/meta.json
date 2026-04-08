@@ -1,0 +1,11 @@
+{
+  "title": "Vexts",
+  "description": "Production-ready opinionated stater kit with Next.js end to end typesafe",
+  "icon": "AudioWaveform",
+  "root": true,
+  "pages": [
+    "techstack",
+    "setup",
+    "codebase"
+  ]
+}

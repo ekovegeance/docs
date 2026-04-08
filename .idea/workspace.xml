@@ -4,11 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: update Laravel and Next.js documentation with additional recommended tools and folder structure">
+    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/mdx.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/(vngne)/meta.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/vexts/codebase/environment-variables.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/vexts/codebase/folder-structure.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/vexts/codebase/index.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/vexts/meta.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/vexts/setup.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/docs/vexts/techstack.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/shared.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/docs/contributing.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/contributing.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/coding-standards/laravel.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/styleguide/coding-standards/laravel.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/coding-standards/nextjs.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/styleguide/coding-standards/nextjs.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/contributing.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/contributing.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/index.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/coding-standards/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/coding-standards/index.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/coding-standards/laravel.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/coding-standards/laravel.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/coding-standards/nextjs.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/coding-standards/nextjs.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/design-guidelines/accessibility.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/design-guidelines/accessibility.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/design-guidelines/atomic.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/design-guidelines/atomic.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/design-guidelines/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/design-guidelines/index.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/documentation-rules/commit.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/documentation-rules/commit.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/documentation-rules/commnets.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/documentation-rules/commnets.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/documentation-rules/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/documentation-rules/index.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/documentation-rules/markdown.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/documentation-rules/markdown.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/documentation-rules/versioning.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/documentation-rules/versioning.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/styleguide/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/index.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/source.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/source.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/source.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,26 +72,34 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;io.github.pandier.intellijdiscordrp.settings.DiscordSettingsConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/me/git/docs/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "next16",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "/Users/me/git/docs/components",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "settings.editor.selected.configurable": "MTOtherSettingsConfigurable",
+    "ts.external.directory.path": "/Users/me/git/docs/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$/content/docs/vexts" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/docs/(vngne)" />
       <recent name="$PROJECT_DIR$/content/docs" />
       <recent name="$PROJECT_DIR$/content/docs/projects" />
     </key>
@@ -103,6 +141,13 @@
       <workItem from="1763703599231" duration="295000" />
       <workItem from="1763704031874" duration="1754000" />
       <workItem from="1763990012103" duration="6270000" />
+      <workItem from="1775611694465" duration="193000" />
+      <workItem from="1775612094839" duration="50000" />
+      <workItem from="1775612300456" duration="8000" />
+      <workItem from="1775612490714" duration="74000" />
+      <workItem from="1775612635937" duration="180000" />
+      <workItem from="1775612888151" duration="38000" />
+      <workItem from="1775612973230" duration="4815000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: rename layout and page files for improved structure">
       <option name="closed" value="true" />
