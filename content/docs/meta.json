@@ -1,13 +1,3 @@
 {
-  "title": "Documentation",
-  "description": "Documentation for the project, including guides, API references, and tutorials.",
-  "Icon": "Album",
-  "root": true,
-  "pages": [
-    "---Introduction---",
-    "index",
-    "contributing",
-    "---Source---",
-    "styleguide"
-  ]
+  "pages": ["(vngne)", "vexts"]
 }

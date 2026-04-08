@@ -1,0 +1,55 @@
+---
+title: Setup
+description: A step-by-step guide to setting up the project locally for development and testing.
+icon: Rocket
+---
+
+To set up the project locally, follow these steps:
+### Create Project
+
+```npm
+npm create next-app --example "https://github.com/ekovegeance/vexts"
+```
+
+### Setup your environment variables:
+```bash title="Terminal"
+cp .env.example .env
+```
+
+```text title=".env" icon="FileText"
+NEXT_PUBLIC_APP_NAME="Vexts"
+NEXT_PUBLIC_APP_DESCRIPTION="Production-ready opinionated stater kit with Next.js"
+NEXT_PUBLIC_URL=http://localhost:3000 # Base URL of your app
+APP_ENV=development
+APP_DEBUG=false
+
+DATABASE_URL=
+
+BETTER_AUTH_SECRET= # You can generate a random string using `openssl rand -base64 32`
+BETTER_AUTH_REQUIRE_EMAIL_VERIFICATION=false # Set to true if you want to require email verification for new users
+RESEND_API_KEY= # You can get this from your Resend account dashboard
+RESEND_FROM_EMAIL= # The email address that will be used as the "from" address when sending emails through Resend. It should be in the format "
+
+# Better Auth Social Provider  https://better-server.com/docs/authentication/google
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+
+```
+
+### Run migrations:
+```bash title="Terminal"
+# Generate and apply migrations:
+pnpm db:push
+
+# Or if you prefer to use migrations:
+pnpm db:migrate
+```
+
+### Start the Development Server
+```bash title="Terminal"
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+

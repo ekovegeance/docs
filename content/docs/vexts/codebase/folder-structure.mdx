@@ -1,0 +1,76 @@
+---
+title: Folder Structure
+description: An overview of the project's organization and file structure.
+---
+
+
+<Files>
+    <Folder name="app" defaultOpen>
+        <Folder name="(auth)" />
+        <Folder name="(landing)" />
+        <Folder name="api">
+            <Folder name="auth/[...all]" />
+            <Folder name="trpc/[trpc]" />
+        </Folder>
+        <File name="favicon.ico" />
+        <File name="global.css" />
+         <File name="layout.tsx" />
+         <File name="page.tsx" />
+    </Folder>
+
+    <Folder name="components">
+        <Folder name="ui">
+            <File name="button.tsx" />
+            <File name="tabs.tsx" />
+            <File name="dialog.tsx" />
+        </Folder>
+        <Folder name="auth">
+            <File name="signin-form.tsx" />
+            <File name="signup-form.tsx" />
+        </Folder>
+    </Folder>
+
+    <Folder name="hooks">
+        <File name="use-initials.ts" />
+        <File name="use-etc.ts" />
+    </Folder>
+
+    <Folder name="lib">
+        <Folder name="auth" />
+        <Folder name="db" />
+        <File name="env.ts" />
+        <File name="utils.ts" />
+    </Folder>
+    <Folder name="trpc">
+    <Folder name="routers">
+            <File name="app.ts" />
+            <File name="post.ts" />
+        </Folder>
+        <File name="init.tsx" />
+        <File name="client.tsx" />
+        <File name="server.tsx" />
+        <File name="query-client.ts" />
+    </Folder>
+    <Folder name="schemas">
+            <File name="auth-schema.ts" />
+        </Folder>
+    <Folder name="types">
+        <File name="user.ts" />
+        <File name="post.ts" />
+    </Folder>
+    <File name="proxy.ts"/>
+    <File name="config.ts" />
+    <File name="drizzle.config.ts" />
+    <File name="package.json" />
+</Files>
+
+## Directory Descriptions
+
+- **app/**: Contains the main application code, including pages, layouts, and global styles.
+- **components/**: Reusable UI components organized by feature or type.
+- **hooks/**: Custom React hooks for shared logic across components.
+- **lib/**: Core business logic and service libraries. Each subdirectory represents a major feature
+- **trpc/**: tRPC API layer providing end-to-end type safety. Routers are organized by feature, and the context provides session and organization scoping.
+- **schemas/**: Zod schemas for validating input data.
+- **types/**: TypeScript type definitions for the project.
+- **proxy.ts**: Middleware for handling API requests and responses.
