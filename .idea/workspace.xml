@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: add initial documentation structure and setup guide for the project">
+    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: update card links and descriptions in index.mdx for consistency">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/docs/vexts/codebase/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/vexts/codebase/index.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/coding-standards/laravel.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/coding-standards/laravel.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,25 +40,25 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "next16",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "last_opened_file_path": "/Users/me/git/docs/components",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "MTOtherSettingsConfigurable",
-    "ts.external.directory.path": "/Users/me/git/docs/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;next16&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/me/git/docs/components&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MTOtherSettingsConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/me/git/docs/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/components" />
@@ -115,7 +115,8 @@
       <workItem from="1775612490714" duration="74000" />
       <workItem from="1775612635937" duration="180000" />
       <workItem from="1775612888151" duration="38000" />
-      <workItem from="1775612973230" duration="5337000" />
+      <workItem from="1775612973230" duration="5514000" />
+      <workItem from="1775810298738" duration="314000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: rename layout and page files for improved structure">
       <option name="closed" value="true" />
@@ -181,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775619100135</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="docs: update card links and descriptions in index.mdx for consistency">
+      <option name="closed" value="true" />
+      <created>1775619938816</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1775619938816</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +209,7 @@
     <MESSAGE value="docs: add extensions for Conventional Commits and GitHub Copilot to documentation" />
     <MESSAGE value="docs: update Laravel and Next.js documentation with additional recommended tools and folder structure" />
     <MESSAGE value="docs: add initial documentation structure and setup guide for the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: add initial documentation structure and setup guide for the project" />
+    <MESSAGE value="docs: update card links and descriptions in index.mdx for consistency" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: update card links and descriptions in index.mdx for consistency" />
   </component>
 </project>
