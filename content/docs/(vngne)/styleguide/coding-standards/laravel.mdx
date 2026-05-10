@@ -56,7 +56,7 @@ A class should have only one responsibility.
 
 Bad:
 
-```php
+```php title="app/Http/Controllers/EventController.php"
 public function update(Request $request): string
 {
     $validated = $request->validate([
@@ -78,7 +78,7 @@ public function update(Request $request): string
 
 Good:
 
-```php
+```php title="app/Http/Controllers/EventController.php"
 public function update(UpdateRequest $request): string
 {
     $this->logService->logEvents($request->events);
@@ -96,7 +96,7 @@ A function should do just one thing and do it well.
 
 Bad:
 
-```php
+```php title="app/Models/User.php"
 public function getFullNameAttribute(): string
 {
     if (auth()->user() && auth()->user()->hasRole('client') && auth()->user()->isVerified()) {
@@ -109,7 +109,7 @@ public function getFullNameAttribute(): string
 
 Good:
 
-```php
+```php title="app/Models/User.php"
 public function getFullNameAttribute(): string
 {
     return $this->isVerifiedClient() ? $this->getFullNameLong() : $this->getFullNameShort();
@@ -130,48 +130,6 @@ public function getFullNameShort(): string
     return $this->first_name[0] . '. ' . $this->last_name;
 }
 ```
-
----
-## **Fat models, skinny controllers**
-
-Put all DB related logic into Eloquent models.
-
-Bad:
-
-```php
-public function index()
-{
-    $clients = Client::verified()
-        ->with(['orders' => function ($q) {
-            $q->where('created_at', '>', Carbon::today()->subWeek());
-        }])
-        ->get();
-
-    return view('index', ['clients' => $clients]);
-}
-```
-
-Good:
-
-```php
-public function index()
-{
-    return view('index', ['clients' => $this->client->getWithNewOrders()]);
-}
-
-class Client extends Model
-{
-    public function getWithNewOrders(): Collection
-    {
-        return $this->verified()
-            ->with(['orders' => function ($q) {
-                $q->where('created_at', '>', Carbon::today()->subWeek());
-            }])
-            ->get();
-    }
-}
-```
-
 ---
 
 ## **Validation**
@@ -180,7 +138,7 @@ Move validation from controllers to Request classes.
 
 Bad:
 
-```php
+```php title="app/Http/Controllers/PostController.php"
 public function store(Request $request)
 {
     $request->validate([
@@ -195,32 +153,36 @@ public function store(Request $request)
 
 Good:
 
-```php
-public function store(PostRequest $request)
-{
-    ...
-}
-
+```php title="app/Http/Requests/PostRequest.php"
 class PostRequest extends Request
 {
     public function rules(): array
     {
         return [
-            'title' => 'required|unique:posts|max:255',
-            'body' => 'required',
-            'publish_at' => 'nullable|date',
+            'title' => ['required', 'unique:posts', 'max:255'],
+            'body' => ['required'],
+            'publish_at' => ['nullable', 'date'],
         ];
     }
 }
 ```
----
-## **Services (Business logic)**
 
-A controller must have only one responsibility, so move business logic from controllers to service classes.
+```php title="app/Http/Controllers/PostController.php"
+public function store(PostRequest $request)
+{
+    ...
+}
+```
+
+---
+
+## **Service Layer (Business logic)**
+
+Fat Service Skinny Controllers. A controller must have only one responsibility, so move business logic from controllers to service classes.
 
 Bad:
 
-```php
+```php title="app/Http/Controllers/ArticleController.php"
 public function store(Request $request)
 {
     if ($request->hasFile('image')) {
@@ -233,14 +195,7 @@ public function store(Request $request)
 
 Good:
 
-```php
-public function store(Request $request)
-{
-    $this->articleService->handleUploadedImage($request->file('image'));
-
-    ...
-}
-
+```php title="app/Services/ArticleService.php"
 class ArticleService
 {
     public function handleUploadedImage($image): void
@@ -251,6 +206,31 @@ class ArticleService
     }
 }
 ```
+
+```php title="app/Http/Controllers/ArticleController.php"
+public function store(Request $request)
+{
+    $this->articleService->handleUploadedImage($request->file('image'));
+
+    ...
+}
+```
+
+### Create service class using artisan command:
+
+install package [Artisan Extender](https://github.com/timwassenburg/laravel-artisan-extender)
+```bash title="Terminal"
+composer require timwassenburg/laravel-artisan-extender --dev
+```
+
+Generate service class
+```bash title="Terminal"
+php artisan make:service UserService
+
+#Optionally, you can add multiple method names (seperated by comma) with the --methods param.
+php artisan make:service UserService --methods=register,login,logout
+```
+
 ---
 ## **Don't repeat yourself (DRY)**
 
@@ -258,7 +238,7 @@ Reuse code when you can. SRP is helping you to avoid duplication. Also, reuse Bl
 
 Bad:
 
-```php
+```php title="app/Models/User.php"
 public function getActive()
 {
     return $this->where('verified', 1)->whereNotNull('deleted_at')->get();
@@ -274,7 +254,7 @@ public function getArticles()
 
 Good:
 
-```php
+```php title="app/Models/User.php"
 public function scopeActive($q)
 {
     return $q->where('verified', true)->whereNotNull('deleted_at');
@@ -300,7 +280,7 @@ Eloquent allows you to write readable and maintainable code. Also, Eloquent has 
 
 Bad:
 
-```sql
+```sql title="Raw SQL query"
 SELECT *
 FROM `articles`
 WHERE EXISTS (SELECT *
@@ -317,7 +297,7 @@ ORDER BY `created_at` DESC
 
 Good:
 
-```php
+```php title="app/Models/Article.php"
 Article::has('user.profile')->verified()->latest()->get();
 ```
 
@@ -325,7 +305,7 @@ Article::has('user.profile')->verified()->latest()->get();
 
 Bad:
 
-```php
+```php title="app/Http/Controllers/ArticleController.php"
 $article = new Article;
 $article->title = $request->title;
 $article->content = $request->content;
@@ -338,7 +318,7 @@ $article->save();
 
 Good:
 
-```php
+```php title="app/Http/Controllers/ArticleController.php"
 $category->article()->create($request->validated());
 ```
 
@@ -347,7 +327,7 @@ $category->article()->create($request->validated());
 
 Bad (for 100 users, 101 DB queries will be executed):
 
-```blade
+```blade title="resources/views/users.blade.php"
 @foreach (User::all() as $user)
     {{ $user->profile->name }}
 @endforeach
@@ -355,7 +335,7 @@ Bad (for 100 users, 101 DB queries will be executed):
 
 Good (for 100 users, 2 DB queries will be executed):
 
-```php
+```php title="app/Http/Controllers/UserController.php"
 $users = User::with('profile')->get();
 
 @foreach ($users as $user)
@@ -367,7 +347,7 @@ $users = User::with('profile')->get();
 
 Bad:
 
-```php
+```php title="app/Console/Commands/ProcessUsers.php"
 $users = $this->get();
 
 foreach ($users as $user) {
@@ -377,7 +357,7 @@ foreach ($users as $user) {
 
 Good:
 
-```php
+```php title="app/Console/Commands/ProcessUsers.php"
 $this->chunk(500, function ($users) {
     foreach ($users as $user) {
         ...
@@ -389,29 +369,30 @@ $this->chunk(500, function ($users) {
 
 Bad:
 
-```php
+```php title="app/Services/ArticleService.php"
 // Determine if there are any joins
 if (count((array) $builder->getQuery()->joins) > 0)
 ```
 
 Good:
 
-```php
+```php title="app/Services/ArticleService.php"
 if ($this->hasJoins())
-```### **Prefer descriptive method and variable names over comments**
+```
+### **Prefer descriptive method and variable names over comments**
 
-   Bad:
+Bad:
 
-   ```php
+```php title="app/Services/ArticleService.php"
    // Determine if there are any joins
    if (count((array) $builder->getQuery()->joins) > 0)
-   ```
+```
 
-   Good:
+Good:
 
-   ```php
+```php title="app/Services/ArticleService.php"
    if ($this->hasJoins())
-   ```
+```
 ---
 
 ## **Do not put JS and CSS in Blade templates**
@@ -419,13 +400,13 @@ Do not put JS and CSS in Blade templates and do not put any HTML in PHP classes
 
 Bad:
 
-```javascript
+```javascript title="resources/views/article.blade.php"
 let article = `{{ json_encode($article) }}`;
 ```
 
 Better:
 
-```php
+```php title="resources/views/article.blade.php"
 <input id="article" type="hidden" value='@json($article)'>
 
 Or
@@ -435,7 +416,7 @@ Or
 
 In a Javascript file:
 
-```javascript
+```javascript title="resources/js/article.js"
 let article = $('#article').val();
 ```
 
@@ -446,7 +427,7 @@ The best way is to use specialized PHP to JS package to transfer the data.
 
 Bad:
 
-```php
+```php title="app/Models/Article.php"
 public function isNormal(): bool
 {
     return $article->type === 'normal';
@@ -457,7 +438,7 @@ return back()->with('message', 'Your article has been added!');
 
 Good:
 
-```php
+```php title="app/Models/Article.php"
 public function isNormal()
 {
     return $article->type === Article::TYPE_NORMAL;
@@ -473,7 +454,7 @@ As long as you follow certain conventions, you do not need to add additional con
 
 Bad:
 
-```php
+```php title="app/Models/Customer.php"
 // Table name 'Customer'
 // Primary key 'customer_id'
 class Customer extends Model
@@ -493,7 +474,7 @@ class Customer extends Model
 
 Good:
 
-```php
+```php title="app/Models/Customer.php"
 // Table name 'customers'
 // Primary key 'id'
 class Customer extends Model
@@ -510,14 +491,14 @@ class Customer extends Model
 
 Bad:
 
-```php
+```php title="app/Http/Controllers/ArticleController.php"
 $request->session()->get('cart');
 $request->input('name');
 ```
 
 Good:
 
-```php
+```php title="app/Http/Controllers/ArticleController.php"
 session('cart');
 $request->name;
 ```
@@ -551,14 +532,14 @@ new Class syntax creates tight coupling between classes and complicates testing.
 
 Bad:
 
-```php
+```php title="app/Http/Controllers/UserController.php"
 $user = new User;
 $user->create($request->validated());
 ```
 
 Good:
 
-```php
+```php title="app/Http/Controllers/UserController.php"
 public function __construct(protected User $user) {}
 
 ...
@@ -573,13 +554,13 @@ Pass the data to config files instead and then use the `config()` helper functio
 
 Bad:
 
-```php
+```php title="app/Http/Controllers/ApiController.php"
 $apiKey = env('API_KEY');
 ```
 
 Good:
 
-```php
+```php title="app/Http/Controllers/ApiController.php"
 // config/api.php
 'key' => env('API_KEY'),
 
@@ -595,14 +576,14 @@ A date as a string is less reliable than an object instance, e.g. a Carbon-insta
 
 Bad:
 
-```php
+```php title="resources/views/orders/show.blade.php"
 {{ Carbon::createFromFormat('Y-d-m H-i', $object->ordered_at)->toDateString() }}
 {{ Carbon::createFromFormat('Y-d-m H-i', $object->ordered_at)->format('m-d') }}
 ```
 
 Good:
 
-```php
+```php title="app/Models/Order.php"
 // Model
 protected $casts = [
     'ordered_at' => 'datetime',
@@ -683,4 +664,5 @@ DB | MySQL, PostgreSQL, SQLite, SQL Server | MongoDB
 - [Laravel Boost](https://laravel.com/ai/boost) for AI-assisted coding.
 - [Laravel Pint](https://laravel.com/docs/pint) for PHP code formatting.
 - [Dbngin](https://dbngin.com/) for managing databases.
-- VS Code extension [Official Laravel](https://marketplace.visualstudio.com/items?itemName=laravel.vscode-laravel), [Laravel Pack](https://marketplace.visualstudio.com/items?itemName=mattedesign.laravel-pack), [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+- VS Code extension: [Official Laravel](https://marketplace.visualstudio.com/items?itemName=laravel.vscode-laravel), [Laravel Pack](https://marketplace.visualstudio.com/items?itemName=mattedesign.laravel-pack), [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+- PHP Storm Plugins: [Laravel Idea](https://laravel-idea.com/), [Laravel Query](https://plugins.jetbrains.com/plugin/16309-laravel-query)
