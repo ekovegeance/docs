@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: add Agent Skills section to Laravel and Next.js documentation">
+    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: update Laravel coding standards with improved code examples and clarity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/coding-standards/laravel.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/styleguide/coding-standards/laravel.mdx" afterDir="false" />
     </list>
@@ -201,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775810975858</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="docs: update Laravel coding standards with improved code examples and clarity">
+      <option name="closed" value="true" />
+      <created>1778391727553</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1778391727553</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +230,7 @@
     <MESSAGE value="docs: add initial documentation structure and setup guide for the project" />
     <MESSAGE value="docs: update card links and descriptions in index.mdx for consistency" />
     <MESSAGE value="docs: add Agent Skills section to Laravel and Next.js documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: add Agent Skills section to Laravel and Next.js documentation" />
+    <MESSAGE value="docs: update Laravel coding standards with improved code examples and clarity" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: update Laravel coding standards with improved code examples and clarity" />
   </component>
 </project>
