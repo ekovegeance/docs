@@ -1,15 +1,17 @@
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import type { MDXComponents } from 'mdx/types';
 import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
+import {ImageZoom} from "@/components/image-zoom";
 
 export function getMDXComponents(components?: MDXComponents) {
-  return {
+    return {
     ...defaultMdxComponents,
       pre: ({ ref: _ref, ...props }) => (
           <CodeBlock {...props}>
               <Pre>{props.children}</Pre>
           </CodeBlock>
       ),
+      img: (props) => <ImageZoom {...(props as any)} />,
     ...components,
   } satisfies MDXComponents;
 }
