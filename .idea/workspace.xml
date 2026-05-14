@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: update Laravel coding standards to PSR-2 and improve workspace configuration">
+    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: enhance contributing guidelines and add image zoom component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mdx.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mdx.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/docs/(vngne)/contributing.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/contributing.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +122,7 @@
       <workItem from="1778334176663" duration="229000" />
       <workItem from="1778460366579" duration="26000" />
       <workItem from="1778567115193" duration="607000" />
-      <workItem from="1778733453811" duration="1133000" />
+      <workItem from="1778733453811" duration="2177000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: rename layout and page files for improved structure">
       <option name="closed" value="true" />
@@ -231,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778567964987</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="docs: enhance contributing guidelines and add image zoom component">
+      <option name="closed" value="true" />
+      <created>1778735069707</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1778735069707</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +260,7 @@
     <MESSAGE value="docs: update Laravel coding standards with improved code examples and clarity" />
     <MESSAGE value="docs: update Laravel coding standards and improve documentation consistency" />
     <MESSAGE value="docs: update Laravel coding standards to PSR-2 and improve workspace configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: update Laravel coding standards to PSR-2 and improve workspace configuration" />
+    <MESSAGE value="docs: enhance contributing guidelines and add image zoom component" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: enhance contributing guidelines and add image zoom component" />
   </component>
 </project>
