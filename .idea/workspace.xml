@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: enhance contributing guidelines and add image zoom component">
+    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: enhance contributing guidelines and add image generation component">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/og/docs/[...slug]/route.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/author.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/copy-button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/docs/(vngne)/contributing.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/contributing.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(docs)/[[...slug]]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(docs)/[[...slug]]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/docs/(vngne)/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/docs/(vngne)/index.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/source.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/source.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,27 +49,28 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;next16&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/me/git/docs/components&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MTOtherSettingsConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/me/git/docs/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "next16",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "/Users/me/git/docs/components",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "settings.editor.selected.configurable": "MTOtherSettingsConfigurable",
+    "ts.external.directory.path": "/Users/me/git/docs/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/components" />
@@ -69,6 +79,7 @@
       <recent name="$PROJECT_DIR$/lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/content/docs/(vngne)" />
       <recent name="$PROJECT_DIR$/content/docs" />
       <recent name="$PROJECT_DIR$/content/docs/projects" />
@@ -122,7 +133,7 @@
       <workItem from="1778334176663" duration="229000" />
       <workItem from="1778460366579" duration="26000" />
       <workItem from="1778567115193" duration="607000" />
-      <workItem from="1778733453811" duration="2177000" />
+      <workItem from="1778733453811" duration="11897000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: rename layout and page files for improved structure">
       <option name="closed" value="true" />
@@ -236,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778735069707</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="docs: enhance contributing guidelines and add image generation component">
+      <option name="closed" value="true" />
+      <created>1778747139385</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1778747139385</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +280,7 @@
     <MESSAGE value="docs: update Laravel coding standards and improve documentation consistency" />
     <MESSAGE value="docs: update Laravel coding standards to PSR-2 and improve workspace configuration" />
     <MESSAGE value="docs: enhance contributing guidelines and add image zoom component" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: enhance contributing guidelines and add image zoom component" />
+    <MESSAGE value="docs: enhance contributing guidelines and add image generation component" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: enhance contributing guidelines and add image generation component" />
   </component>
 </project>
