@@ -13,7 +13,6 @@ export const metadata: Metadata = {
         default: 'vngne',
     },
     description: 'Personal knowledge management system',
-    metadataBase: new URL('https://vngne.vercel.app/'),
 }
 
 const plusJakartaSans = Geist({
