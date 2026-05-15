@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: update metadata and add author component for improved documentation">
-      <change afterPath="$PROJECT_DIR$/components/footer-banner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(docs)/[[...slug]]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(docs)/[[...slug]]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(docs)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(docs)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/global.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/og/docs/[...slug]/route.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/banner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/banner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +125,8 @@
       <workItem from="1778460366579" duration="26000" />
       <workItem from="1778567115193" duration="607000" />
       <workItem from="1778733453811" duration="13092000" />
-      <workItem from="1778811047163" duration="4632000" />
+      <workItem from="1778811047163" duration="4900000" />
+      <workItem from="1778824188604" duration="266000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: rename layout and page files for improved structure">
       <option name="closed" value="true" />
@@ -265,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778765058934</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="docs: update metadata and add author component for improved documentation">
+      <option name="closed" value="true" />
+      <created>1778817588612</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1778817588613</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
