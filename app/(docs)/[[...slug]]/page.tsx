@@ -1,4 +1,4 @@
-import {getPageImage, source} from '@/lib/source';
+import {source} from '@/lib/source';
 import {DocsBody, DocsDescription, DocsPage, DocsTitle, PageLastUpdate} from 'fumadocs-ui/page';
 import {notFound} from 'next/navigation';
 import {createRelativeLink} from 'fumadocs-ui/mdx';
@@ -6,6 +6,7 @@ import {getMDXComponents} from '@/mdx-components';
 import {getGithubLastEdit} from 'fumadocs-core/content/github';
 import {ViewOptionsPopover} from "fumadocs-ui/layouts/docs/page";
 import Author from "@/components/author";
+import {FooterBanner} from "@/components/footer-banner";
 
 export default async function Page(props: {
     params: Promise<{ slug?: string[] }>;
@@ -38,7 +39,7 @@ export default async function Page(props: {
                         <Author/>
                         <ViewOptionsPopover className="w-fit" githubUrl={githubUrl} markdownUrl={`${page.url}.mdx`}/>
                     </div>
-                )
+                ),
             }}
         >
 
@@ -70,8 +71,5 @@ export async function generateMetadata(props: {
     return {
         title: page.data.title,
         description: page.data.description,
-        openGraph: {
-            images: getPageImage(page).url,
-        },
     };
 }
