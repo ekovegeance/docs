@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/ekovegeance/docs/compare/v1.0.0...v1.1.0) (2026-05-16)
+
+
+### Features
+
+* add new feature release ([e71ca25](https://github.com/ekovegeance/docs/commit/e71ca2578203921153a64bb41430212a83e284ad))
+* add new feature release ([81e9e77](https://github.com/ekovegeance/docs/commit/81e9e77bcba87d77cbe866ca4f2492b1d8184888))
+
 ## 1.0.0 (2026-05-16)
 
 
