@@ -4,7 +4,7 @@ description: Standards for writing clear and effective commit messages.
 ---
 
 
-The [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of. This convention dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.
+The [Conventional Commits](https://www.conventionalcommits.org/) specification is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of. This convention dovetails with SemVer, by describing the features, fixes, and breaking changes made in commit messages.
 
 ## Commit Message Structure
 ```
@@ -29,6 +29,7 @@ The [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) speci
 | **Type**      | **Description**                                          |
 |---------------|----------------------------------------------------------|
 | `feat`        | Introducing a new feature.                               |
+| `feat!`        | Introducing a new feature breaking change.              |
 | `fix`         | Fixing a bug.                                            |
 | `docs`        | Changes to documentation only.                           |
 | `style`       | Code style changes (e.g., formatting, whitespace).       |
@@ -76,7 +77,7 @@ Refactored queries to reduce response time by 20%.
 
 ### Breaking Changes
 ```
-feat(user): introduce mandatory email verification
+feat(user)!: introduce mandatory email verification
 
 BREAKING CHANGE: All existing users must verify their email addresses before login.
 ```
@@ -103,5 +104,6 @@ Closes #123
 - [Husky](https://typicode.github.io/husky/)
 
 ## Extensions
-- [Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)
+- VS Code: [Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)
+- JetBrains: [Conventional Commits](https://plugins.jetbrains.com/plugin/13389-conventional-commit)
 - [Github Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
