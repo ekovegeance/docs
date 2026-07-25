@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="feat: add new feature release">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/contribute-branch.png" beforeDir="false" />
-    </list>
+    <list default="true" id="93b657df-60f6-4757-9e6e-760a0be2bb5d" name="Changes" comment="docs: update contributing guidelines and workspace configuration for clarity" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +124,7 @@
       <workItem from="1778733453811" duration="13092000" />
       <workItem from="1778811047163" duration="4900000" />
       <workItem from="1778824188604" duration="1760000" />
-      <workItem from="1778950433400" duration="400000" />
+      <workItem from="1778950433400" duration="477000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: rename layout and page files for improved structure">
       <option name="closed" value="true" />
@@ -305,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778933560437</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="docs: update contributing guidelines and workspace configuration for clarity">
+      <option name="closed" value="true" />
+      <created>1778950928076</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1778950928076</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,6 +341,7 @@
     <MESSAGE value="docs: update task metadata and last commit message for improved documentation clarity" />
     <MESSAGE value="feat: release" />
     <MESSAGE value="feat: add new feature release" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add new feature release" />
+    <MESSAGE value="docs: update contributing guidelines and workspace configuration for clarity" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: update contributing guidelines and workspace configuration for clarity" />
   </component>
 </project>

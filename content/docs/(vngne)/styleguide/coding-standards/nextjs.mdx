@@ -11,52 +11,95 @@ description: Next.js App Router (TypeScript) Style Guide
 
 ## Folder and File Structure
 - Follow [Next JS Project Structure](https://nextjs.org/docs/app/getting-started/project-structure)
+- And [Community discussion](https://github.com/orgs/community/discussions/190342)
 
 <Files>
-    <Folder name="app" defaultOpen>
+    <Folder name="public # Publicly accessible static files">
+        <Folder name="images" />
+        <Folder name="icons" />
+        <File name="robots.txt" />
+    </Folder>
+    <Folder name="src # Source code" defaultOpen>
+      <Folder name="app # 1. Routing Layer (App Router, React Server Components)" defaultOpen>
         <File name="layout.tsx" />
         <File name="page.tsx" />
         <File name="global.css" />
-    </Folder>
-    <Folder name="components">
-        <Folder name="ui">
+        <Folder name="dashboard # Nested route" defaultOpen>
+            <File name="layout.tsx" />
+            <File name="page.tsx" />
+        </Folder>
+        <Folder name="(auth) # Grouping without affecting URL">
+            <File name="layout.tsx" />
+            <Folder name="login">
+                <File name="page.tsx" />
+            </Folder>
+            <Folder name="register">
+                <File name="page.tsx" />
+            </Folder>
+        </Folder>
+      </Folder>
+      <Folder name="features # 2. Business Domain Layer (Core Application Features)" defaultOpen>
+        <Folder name="auth">
+          <Folder name="actions # Server actions">
+            <File name="login.action.ts" />
+            <File name="register.action.ts" />
+          </Folder>
+          <Folder name="components # Reusable components for this feature">
+            <File name="login-form.tsx" />
+            <File name="register-form.tsx" />
+          </Folder>
+          <Folder name="services # Services for this feature">
+            <File name="auth.service.ts" />
+          </Folder>
+          <Folder name="validations # Validations for this features">
+            <File name="auth.schema.ts # Zod schema" />
+            <File name="auth.type.ts # TypeScript type" />
+          </Folder>
+        </Folder>
+      </Folder>
+    <Folder name="components  # 3. Shared UI Component (Global/Dumb components)">
+
+        <Folder name="ui" defaultOpen>
             <File name="button.tsx" />
             <File name="tabs.tsx" />
             <File name="dialog.tsx" />
         </Folder>
-        <Folder name="post">
-            <File name="post-card.tsx" />
-            <File name="post-list.tsx" />
-        </Folder>
+        <Folder name="layout"/>
         <Folder name="etc"/>
     </Folder>
-    <Folder name="hooks">
-        <File name="use-fetch.ts" />
-        <File name="use-auth.ts" />
+    <Folder name="lib # 4. Infrastructure and Untilities Layer">
+      <File name="api.ts # Configuration Axios instance and Interceptors" />
+      <File name="utils.ts # General utilities functions" />
+      <File name="formatters.ts # Formatters for date, currency, etc" />
     </Folder>
-    <Folder name="lib">
-        <File name="api.ts" />
-        <File name="format-date.ts" />
+    <Folder name="store # 5. Global State Management Layer">
+        <File name="ui-store.ts" />
+        <File name="cart-store.ts" />
+        <File name="auth-store.ts" />
     </Folder>
-    <Folder name="services">
-        <File name="auth-service.ts" />
-        <File name="data-service.ts" />
+    <Folder name="hooks # 6. Global Hooks Layer">
+        <File name="use-debounce.ts" />
+        <File name="use-window-size.ts" />
     </Folder>
     <Folder name="styles">
         <File name="globals.css" />
         <File name="NavBar.module.css" />
     </Folder>
-    <Folder name="types">
+    <Folder name="types # Global types definitions">
         <File name="user.ts" />
         <File name="post.ts" />
     </Folder>
-    <Folder name="context">
-        <File name="auth-context.tsx" />
-        <File name="theme-context.tsx" />
+    <File name="proxy.ts # 7. Gatekeeper Layer (Middleware)"/>
     </Folder>
-    <File name="middleware.ts / proxy.ts"/>
-    <File name="config.ts" />
+    <File name=".env" />
+    <File name=".env.example" />
+    <File name="components.json # Shadcn UI Configuration" />
+    <File name="next.config.ts # Next.js Configuration" />
     <File name="package.json" />
+    <File name="tsconfig.json" />
+    <File name="eslint.config.mjs" />
+    <File name="prettier.config.ts" />
+    <File name="README.md" />
 </Files>
 
 ---
@@ -138,7 +181,7 @@ return (
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -146,10 +189,17 @@ return (
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
   "exclude": ["node_modules"]
 }
 
@@ -212,6 +262,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 ## Testing
 
+see: https://nextjs.org/docs/app/guides/testing
+
 - Use **Jest** and **React Testing Library** for unit testing.
 
 Example:
@@ -236,20 +288,22 @@ test('renders Button with label', () => {
 - Use ESLint with the following configuration in `eslint.config.mjs`:
 
 ```js
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+  ]),
+]);
 
 export default eslintConfig;
 
@@ -274,4 +328,5 @@ export default eslintConfig;
 ## Recommend Tools & Configuration
 - [Awesomecode](https://marketplace.visualstudio.com/items?itemName=ekovegeance.awesomecode) theme and code editor setup for VS Code
 - [Next.js MCP Server](https://nextjs.org/docs/app/guides/mcp) for coding agents
+- VSCode Extension: [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=TailwindCSS.tailwind-intellisense), [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag), [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag), [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/ekovegeance/docs/compare/v1.1.0...v1.1.1) (2026-07-25)
+
+
+### Bug Fixes
+
+* add packages field to pnpm-workspace.yaml to resolve Vercel build error ([13d3be5](https://github.com/ekovegeance/docs/commit/13d3be5f918cc3555147a76f3a4621a2b86f7956))
+
 ## [1.1.0](https://github.com/ekovegeance/docs/compare/v1.0.0...v1.1.0) (2026-05-16)
 
 
